@@ -15,15 +15,18 @@
       <script src="jquery.js" type="text/javascript"></script>
       <script src="jquery.maskedinput.js" type="text/javascript"></script>
         <div>
-        <nav class="navbar navbar-light bg-light" style="font-size: 30px !important ;background-color: #9fc6e4;">
-            <a class="navbar-brand" style=" color: rgb(19 163 232); ">
+        
+          <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" style=" color: rgb(19 163 232) ; margin-left:  10px;">
               
               <img src="./nav-cep-icon.png" width="48" height="48" class="d-inline-block align-top" alt="">
-              Consulta Cep
+                <span style="font-size: 30px !important ;">Consulta Cep</span>
             </a>
           </nav>
-    
-        <div class="container px-4">
+          <div class="container px-4" style="margin-top: 2%; align-content: center;">
+            <h3 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #4babd8;">Abaixo faça a consulta de seu cep</h3>
+          </div>
+        <div class="container px-4" style="margin-top: 2%;">
         <form class="row g-3">
             <div class="mb-3">
               <label for="Cep" class="form-label">Cep</label>
@@ -132,9 +135,11 @@
       });
 }
     
-
+//Mascara do Cep
       $(document).ready(function(){
 	    $("#Cep").mask("99999-999");
       });
     
+
+      
   </script>

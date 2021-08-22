@@ -16,8 +16,14 @@ const axios = require('axios')
 
 
 app.post('/buscacep', async(req,res) => {
-    const value = JSON.parse(JSON.stringify(req.body.value))
-    
+    var value = JSON.stringify(req.body.value)
+    var message = ""
+   if (value == "" || value == undefined) {
+    message = "Erro na Requisição. Favor utilizar {value: value} "
+       return res.json(({message}))
+   } else {
+
+    var value = JSON.parse(value)
     var cep_bl = true 
     var message = ""
     var aux = value.replace('-','')
@@ -48,6 +54,9 @@ app.post('/buscacep', async(req,res) => {
     } else {
         return res.json(({message}))
     }
+       
+   } 
+    
     
 })
 
