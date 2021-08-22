@@ -83,7 +83,8 @@
 
   <script type="text/javascript">
    
-
+      //Faz a requisição para a api e valide o retorno
+      
     function validar(){
     const message =  document.getElementById('message')  
     const cep = document.getElementById('Cep')
@@ -101,7 +102,7 @@
           }
         })
         .done(function(data){
-          console.log(data)
+          
           spiner.style.visibility = "hidden"
           if (data.message == "" || data.message == undefined) {
             document.getElementById('logradouro').value = data.logradouro;
@@ -135,7 +136,7 @@
       });
 }
     
-//Mascara do Cep
+      //Mascara do Cep
       $(document).ready(function(){
 	    $("#Cep").mask("99999-999");
       });

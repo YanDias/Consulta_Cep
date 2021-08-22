@@ -31,7 +31,7 @@ app.post('/buscacep', async(req,res) => {
     var cep = aux.toString()
     
     
-    console.log(cep)
+    
     if (cep.length != 8) {
             cep_bl = false
             message = "O valor digitado não é um cep valido"
@@ -43,7 +43,7 @@ app.post('/buscacep', async(req,res) => {
     if (cep_bl == true) {
         
         const {data} = await axios('https://viacep.com.br/ws/'+ cep + '/json')
-        console.log(data)
+       
         if (data.cep == undefined ) {
             message = "Endereço não localizado"
             return res.json(({message}))
