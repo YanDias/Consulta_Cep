@@ -6,7 +6,6 @@
 
 
 Para ver a aplicação sera necessário entrar na pasta Web e abrir o arquivo index.html
-após isso sera necessário rodar o servidor da api node, realizando o comando npm start dentro do terminal na pasta Node
-
+após isso sera necessário rodar a api node, realizando o comando npm start dentro do terminal na pasta Node e após isso o sistema estara pronto para uso 
 
 Duvidas fico a disposição 
